@@ -25,6 +25,10 @@ pip install -r requirements.txt
 
 耳蜗依赖 **ffmpeg** 来解码非 wav 格式（webm/m4a/mp3 等）：
 
+> **常见问题：QQ/微信的语音条能直接喂吗？**
+> 不能直接喂——它们导出来多是 silk/amr 这类聊天专用格式，ffmpeg 对 silk 无能为力。
+> 需要先用任意 silk 转换工具转成 wav/mp3，再走耳蜗和速记。转完之后，唱歌也能听个大概（清唱比带伴奏识别得准，这是 Whisper 的天性）。
+
 ```bash
 # Windows (scoop)
 scoop install ffmpeg
